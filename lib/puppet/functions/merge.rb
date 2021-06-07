@@ -40,7 +40,7 @@ Puppet::Functions.create_function(:merge) do
   # @return
   #   The merged hash
   dispatch :merge2hashes do
-    repeated_param 'Variant[Hash, Undef, String[0,0]]', :args # this strange type is backwards compatible
+    repeated_param 'Variant[Hash[Scalar,Any], Undef, String[0,0]]', :args # this strange type is backwards compatible
     return_type 'Hash'
   end
 
